@@ -352,7 +352,7 @@ function doDecrypt() {
         outEl.innerText = ""
         setError(res)
     } else {
-        outEl.innerText = atob(res)
+        outEl.textContent = atob(res).replace(/<br\s*\/?>/gi, "\n")
         setError("")
     }
 }
